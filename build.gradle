@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+}
+
+group 'kotlin-in-action'
+version '1.0-SNAPSHOT'
+
+
+    repositories {
+        mavenCentral()
+    }
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+sourceSets {
+    main.kotlin.srcDirs += 'src'
+}
+
+kotlin {
+    jvmToolchain(17)
+}
