@@ -6,10 +6,6 @@ group 'kotlin-in-action'
 version '1.0-SNAPSHOT'
 
 
-    repositories {
-        mavenCentral()
-    }
-
 apply plugin: 'kotlin'
 
 repositories {
@@ -22,6 +18,10 @@ dependencies {
 
 sourceSets {
     main.kotlin.srcDirs += 'src'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 kotlin {
